@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <title>DORAEMON: Domain Randomization via Entropy Maximization</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"  />
+    <link rel="stylesheet" type="text/css" href="assets/css/animatedBackground.css"  />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="citePopup">
+      <div id="citePopupContent">
+        <p>If you refer to DORAEMON in your works or you use our Github repository, please consider citing:</p>
+          <div class="bibtexContainer">
+Coming soon
+<!-- <pre>@article{tiboni2023dropo,
+  title = {DROPO: Sim-to-real transfer with offline domain randomization},
+  journal = {Robotics and Autonomous Systems},
+  pages = {104432},
+  year = {2023},
+  issn = {0921-8890},
+  doi = {https://doi.org/10.1016/j.robot.2023.104432},
+  url = {https://www.sciencedirect.com/science/article/pii/S0921889023000714},
+  author = {Gabriele Tiboni and Karol Arndt and Ville Kyrki},
+  keywords = {Robot learning, Transfer learning, Reinforcement learning, Domain randomization}
+}</pre> -->
+          </div>
+          <i id="closePopupIcon">&times;</i>
+      </div>
+    </div>
+
+    <header>
+      <div id="animContainer"></div>
+      <div id="headerBackground"></div>
+
+      <div id="elevatedContent">
+        <h1>DORAEMON: Domain Randomization<br/>via Entropy Maximization</h1>
+        <h3>Under review</h3>
+
+        <div id="linksContainer">
+          <!-- <a href="https://www.sciencedirect.com/science/article/pii/S0921889023000714" target="_blank" class="iconLink">Paper <img src="assets/img/paper_icon2_64px.png"/></a> -->
+          <a href="https://github.com/gabrieletiboni/doraemon" target="_blank" class="iconLink">Code <img src="assets/img/github_logo_light_64px.png"/></a>
+          <!-- <a href="#contributionsSection">Contributions</a> -->
+          <!-- <a href="#findingsSection">Highlights</a> -->
+          <a class="linkLike openCitePopup">Cite</a>
+        </div>
+      </div>
+
+      <div id="videoContainer">
+        <div>
+          <!-- <video controls>
+            <source src="assets/video/dropo_video_v1_trimmed_official.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video> -->
+        </div>
+      </div>
+    </header>
+
+    <section id="main">
+      <div id="intro">
+        <p>
+          <strong><em>Abstract</em></strong><br/>
+          Varying dynamics parameters in simulation is a popular Domain Randomization (DR) approach for overcoming the reality gap in Reinforcement Learning (RL). Nevertheless, DR heavily hinges on the choice of the sampling distribution of the dynamics parameters, since high variability is crucial to regularize the agent's behavior but notoriously leads to overly conservative policies when randomizing excessively.
+In this paper, we propose a novel approach to address sim-to-real transfer, which automatically shapes dynamics distributions during training in simulation without requiring real-world data.
+We introduce DOmain RAndomization via Entropy MaximizatiON (DORAEMON), a constrained optimization problem that directly maximizes the entropy of the training distribution while retaining generalization capabilities. In achieving this, DORAEMON gradually increases the diversity of sampled dynamics parameters as long as the probability of success of the current policy is sufficiently high.
+We empirically validate the consistent benefits of DORAEMON in obtaining highly adaptive and generalizable policies, i.e. solving the task at hand across the widest range of dynamics parameters, as opposed to representative baselines from the DR literature. Notably, we also demonstrate the Sim2Real applicability of DORAEMON through its successful zero-shot transfer in a robotic manipulation setup under unknown real-world parameters.
+        </p>
+        <br/>
+        <p style="font-style: italic;">Authored by <a href="https://gabrieletiboni.com/" target="_blank" class="easyLink">Gabriele Tiboni</a>, <a href="https://www.ias.informatik.tu-darmstadt.de/Team/PascalKlink" target="_blank" class="easyLink">Pascal Klink</a>, <a href="https://www.ias.informatik.tu-darmstadt.de/Member/JanPeters" target="_blank" class="easyLink">Jan Peters</a>, <a href="http://www.tatianatommasi.com/" target="_blank" class="easyLink">Tatiana Tommasi</a>, <a href="https://scholar.google.gr/citations?hl=en&user=1Rt_86gAAAAJ" target="_blank" class="easyLink">Carlo D'Eramo</a>, <a href="https://scholar.google.gr/citations?hl=en&user=mlho5FkAAAAJ" target="_blank" class="easyLink">Georgia Chalvatzaki</a>.
+        </p>
+      </div>
+
+      <!-- <div id="introImg">
+        <span>
+          <img src="assets/img/dropo_overview.png">
+        </span>
+        <span>
+          DROPO uses off-policy data (e.g. human demonstrations) to learn a domain randomization distribution,<br/>
+          which is later used to train a policy that can be directly transferred to the real world.
+        </span>
+      </div> -->
+
+      <!-- <div class="tab" id="contributionsSection">
+        <h2>Contributions</h2>
+        <ul class="easyUl">
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+        <p class="comingSoon">
+          Coming Soon
+        </p>
+      </div> -->
+
+      <!-- <div class="tab" id="findingsSection">
+          <h2>Highlights</h2>
+          <div class="main-list">
+            <span>
+              <span class="index">#1</span>
+              <span class="content">
+                <span class="title">
+                  A novel method for estimating dynamics parameters distributions from offline collected real-world data is presented.
+                </span>
+              </span>
+            </span>
+            <span>
+              <span class="index">#2</span>
+              <span class="content">
+                <span class="title">
+                  Robot policies trained with DROPO can efficiently transfer to the real world.
+                </span>
+              </span>
+              
+            </span>
+            <span>
+              <span class="index">#3</span>
+              <span class="content">
+                <span class="title">
+                  Human demonstrations can be used for safe and data-efficient simulator tuning.
+                </span>
+              </span>
+            </span>
+            <span>
+              <span class="index">#4</span>
+              <span class="content">
+                <span class="title">
+                  Probabilistic metrics are crucial for optimizing dynamics parameters distributions. 
+                </span>
+              </span>
+            </span>
+          </div> 
+      </div> -->
+
+      <!-- <div class="tab">
+          <h2>Conclusions</h2>
+          <p class="comingSoon">
+            Coming Soon
+          </p>
+      </div> -->
+
+      <div class="tab">
+          <h2>Citing</h2>
+          <p class="comingSoon">
+            Coming Soon
+          </p>
+          <!-- <div class="bibtexContainer">
+<pre>@article{tiboni2023dropo,
+  title = {DROPO: Sim-to-real transfer with offline domain randomization},
+  journal = {Robotics and Autonomous Systems},
+  pages = {104432},
+  year = {2023},
+  issn = {0921-8890},
+  doi = {https://doi.org/10.1016/j.robot.2023.104432},
+  url = {https://www.sciencedirect.com/science/article/pii/S0921889023000714},
+  author = {Gabriele Tiboni and Karol Arndt and Ville Kyrki},
+  keywords = {Robot learning, Transfer learning, Reinforcement learning, Domain randomization}
+}</pre>
+          </div> -->
+      </div>
+    </section>
+
+    <footer>
+      If you have any questions, please contact us at <a href="mailto:gabriele.tiboni@polito.it" class="easyLink">gabriele.tiboni@polito.it</a>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+      const init_brad = 35;
+      $('#headerBackground').css("border-radius", init_brad+"%");
+      $('#animContainer').css("border-radius", init_brad+"%");
+
+      // check if viewport is mobile or desktop
+      const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+      const isTablet = window.matchMedia("only screen and (max-width: 1024px)").matches;
+      
+
+      function init() {
+        loadAnimatedBackground();
+
+        if (!isMobile && !isTablet) {
+          $('body').on('scroll', function() {
+            var scroll = $('body').scrollTop();
+            var viewportHeight = $(window).height();  // get viewport height
+
+            // max_brad = 35;
+            new_brad = init_brad - ((init_brad/viewportHeight) * scroll)
+            if (scroll <= viewportHeight) {
+              $("#headerBackground").css("border-radius", new_brad+"%");
+              $('#animContainer').css("border-radius", new_brad+"%");
+            }
+          });
+        }
+      }
+
+      //scroll to div
+      $('a[href^="#"]').on('click', function(event) {
+
+          var target = $( $(this).attr('href') );
+
+          if( target.length ) {
+              event.preventDefault();
+              $('html, body').animate({
+                  // scrollTop: target.offset().top - 30
+                  scrollTop: target.offset().top+$('body').scrollTop()-10
+              }, 600);
+          }
+
+      });
+
+      $(document).on('click', '.openCitePopup', function() {
+        $(document.getElementById("citePopup")).fadeIn(200);
+      });
+
+      $(document).on('click', '#citePopup', function() {
+        if (!$(event.target).closest(document.getElementById("citePopupContent")).length) {
+          $(document.getElementById("citePopup")).fadeOut(200);
+        }
+      });
+
+      $(document.getElementById("closePopupIcon")).on('click', function() {
+          $(document.getElementById("citePopup")).fadeOut(200);
+      });
+
+      function loadAnimatedBackground() {
+        $("#animContainer").load("assets/include/animatedBackground.html"); 
+      }
+
+      init();
+
+      
+    </script>
+  </body>
+</html>
