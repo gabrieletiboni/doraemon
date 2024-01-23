@@ -36,10 +36,11 @@
 
       <div id="elevatedContent">
         <h1>DORAEMON: Domain Randomization<br/>via Entropy Maximization</h1>
-        <h3>Under review</h3>
+        <h3 style="font-style: normal;">G. Tiboni, P. Klink, J. Peters, T. Tommasi, C. D'Eramo, G. Chalvatzaki<br/>
+        International Conference on Learning Representations (ICLR), 2024</h3>
 
         <div id="linksContainer">
-          <a href="https://arxiv.org/abs/2311.01885" target="_blank" class="iconLink">Paper <img src="assets/img/paper_icon2_64px.png"/></a>
+          <a href="https://openreview.net/forum?id=GXtmuiVrOM" target="_blank" class="iconLink">Paper <img src="assets/img/paper_icon2_64px.png"/></a>
           <a href="https://github.com/gabrieletiboni/doraemon" target="_blank" class="iconLink">Code <img src="assets/img/github_logo_light_64px.png"/></a>
           <!-- <a href="#contributionsSection">Contributions</a> -->
           <!-- <a href="#findingsSection">Highlights</a> -->
@@ -49,17 +50,17 @@
 
       <div id="videoContainer">
         <div>
-          <div id="videoPlaceholder">
+          <!-- <div id="videoPlaceholder">
             <span>
               <img src="assets/img/play2.png" />
               <br/>
               Video coming soon
             </span>
-          </div>
-          <!-- <video controls>
-            <source src="assets/video/dropo_video_v1_trimmed_official.mp4" type="video/mp4">
+          </div> -->
+          <video controls>
+            <source src="assets/video/suppl_video.mp4" type="video/mp4">
             Your browser does not support the video tag.
-          </video> -->
+          </video>
         </div>
       </div>
     </header>
@@ -78,15 +79,14 @@ We empirically validate the consistent benefits of DORAEMON in obtaining highly 
         </p>
       </div>
 
-      <!-- <div id="introImg">
+      <div id="introImg">
         <span>
-          <img src="assets/img/dropo_overview.png">
+          <img style="max-width: 100%;" src="assets/img/halfcheetah_2dheatmap.png">
         </span>
         <span>
-          DROPO uses off-policy data (e.g. human demonstrations) to learn a domain randomization distribution,<br/>
-          which is later used to train a policy that can be directly transferred to the real world.
+          Test return on HalfCheetah environment across varying dynamics parameters (torso mass and ground friction). The green outline highlights the region of cells where a success occurs (i.e. return >= 5000). DORAEMON policies demonstrate great adaptivity, as they are able to learn the task successfully across the widest range of dynamics parameters.
         </span>
-      </div> -->
+      </div>
 
       <!-- <div class="tab" id="contributionsSection">
         <h2>Contributions</h2>
