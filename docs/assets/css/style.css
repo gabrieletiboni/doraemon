@@ -1,5 +1,6 @@
 :root {
-	--main-color: rgb(57, 73, 171);
+/*	--main-color: rgb(57, 73, 171);*/
+	--main-color: rgb(13, 71, 161);
 }
 
 html, body {
@@ -107,7 +108,8 @@ header {
 		/*background: rgb(39,58,86);*/
 		/*background: radial-gradient(circle, rgba(39,58,86,1) 0%, rgba(66,89,124,1) 51%, rgba(66,89,124,1) 100%);*/
 		/*background: radial-gradient(circle, rgba(0, 137, 123, 0.9) 0%, rgba(0, 137, 123,1) 51%, rgba(0, 137, 123,1) 100%);*/
-		background: radial-gradient(circle, rgba(57, 73, 171, 0.9) 0%, rgba(57, 73, 171,1) 51%, rgba(57, 73, 171,1) 100%);
+/*		background: radial-gradient(circle, rgba(57, 73, 171, 0.9) 0%, rgba(57, 73, 171,1) 51%, rgba(57, 73, 171,1) 100%);*/
+		background: radial-gradient(circle, rgba(13, 71, 161, 0.9) 0%, rgba(13, 71, 161, 1) 51%, rgba(13, 71, 161, 1) 100%);
 		z-index: 10;
 
 		-webkit-border-radius: 35%;
