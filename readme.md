@@ -11,7 +11,8 @@ In this paper, we propose a novel approach to address sim-to-real transfer, whic
 We introduce DOmain RAndomization via Entropy MaximizatiON (DORAEMON), a constrained optimization problem that directly maximizes the entropy of the training distribution while retaining generalization capabilities. In achieving this, DORAEMON gradually increases the diversity of sampled dynamics parameters as long as the probability of success of the current policy is sufficiently high.
 We empirically validate the consistent benefits of DORAEMON in obtaining highly adaptive and generalizable policies, i.e. solving the task at hand across the widest range of dynamics parameters, as opposed to representative baselines from the DR literature. Notably, we also demonstrate the Sim2Real applicability of DORAEMON through its successful zero-shot transfer in a robotic manipulation setup under unknown real-world parameters.
 
-![Alt Text](docs/assets/img/gifs/AutoDR_medium_progress.gif)
+<img src="docs/assets/img/gifs/Doraemon_hard_progress.gif" width="280" />
+<img src="docs/assets/img/gifs/Doraemon_hard_progress.gif" width="280" />
 
 ## Installation
 
