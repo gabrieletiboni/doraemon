@@ -1,0 +1,9 @@
+---
+env: DMPandaPush-FFPosCtrl-ContPen-GoalA-mf0comy_d_fl-JVelNoise0.0011-BoxNoise0.002-InitBox0.01-BoxHeight0.005-NormReward-v0
+performance_lb: -0.03  # meters from target
+gamma: 0.99
+test_episodes: 150
+dr_percentage: 1.
+n_contexts_for_eval: 340  # 17 dims * 20 samples
+host:
+  mem-per-cpu: '8100M'

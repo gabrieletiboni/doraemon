@@ -1,0 +1,25 @@
+---
+host:
+  job-name : autodr
+  cpus-per-task: 5
+timesteps: 7500000
+eval_freq: 100000
+check_update_freq: 20000
+buffer_size: 20
+bound_sampling_prob: 0.5
+now: 5
+algo: sac
+dr_percentage: 0.95
+gradient_steps: 1
+original: false
+train_until_lb: true
+compute_final_heatmap: false
+force_success_with_returns: false
+verbose: 2
+wandb: disabled
+
+# Parameters to be set explicitly
+env: null
+delta: null
+threshold_low: null
+threshold_high: null

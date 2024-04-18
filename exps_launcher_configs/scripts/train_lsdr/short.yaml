@@ -1,0 +1,6 @@
+---
+host:
+  time: '12:00:00'
+timesteps: 2500000
+sweep:
+  alpha: [50, 10, 5, 1, 0.1]

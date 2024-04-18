@@ -1,0 +1,4 @@
+---
+env: RandomHalfCheetah-v0
+threshold_low: 2500
+threshold_high: 5000

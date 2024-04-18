@@ -1,0 +1,14 @@
+<mujoco model="table">
+
+    <body name="table" pos="0.79 0 0">
+        <geom name="table" solref=".1 .1" type="box" size="0.945 0.4 0.0125" pos="0 0 0.75" material="table_top"/>
+        <geom name="leg1" solref=".1 .1" type="box" size="0.015 0.015 0.375" pos="-0.905 -0.36 0.375" material="dark"/>
+        <geom name="leg2" solref=".1 .1" type="box" size="0.015 0.015 0.375" pos="-0.905 0.36 0.375" material="dark"/>
+        <geom name="leg3" solref=".1 .1" type="box" size="0.015 0.015 0.375" pos="0.905 -0.36 0.375" material="dark"/>
+        <geom name="leg4" solref=".1 .1" type="box" size="0.015 0.015 0.375" pos="0.905 0.36 0.375" material="dark"/>
+        <body name="robot_container" pos="-0.79 0 0.762">
+            <include file="franka_chain.xml"/>
+        </body>
+    </body>
+
+</mujoco>

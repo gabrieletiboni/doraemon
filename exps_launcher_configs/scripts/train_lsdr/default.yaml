@@ -1,0 +1,26 @@
+---
+host:
+  job-name: lsdr
+  cpus-per-task: 5
+timesteps: 7500000
+timesteps_per_iter: 20000
+count_eval_ts_in_budget: true
+n_contexts_for_eval: 100
+obj_fun_lr: 0.05
+whiten_performance: true
+standardized_performance: false
+use_kl_regularizer: true
+now: 5
+algo: sac
+dr_percentage: 0.95
+gradient_steps: 1
+verbose: 2
+compute_final_heatmap: false
+force_success_with_returns: false
+wandb: disabled
+
+# Parameters to be set explicitly
+env: null
+alpha: null
+performance_lb: null
+distr_learning_iters: null

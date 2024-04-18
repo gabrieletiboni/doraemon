@@ -1,0 +1,15 @@
+importlib-metadata==4.13.0
+wandb
+stable-baselines3==1.7.0
+gym==0.21.0
+seaborn
+omegaconf
+scikit-learn
+mujoco-py<2.2,>=2.1
+Jinja2==3.1.2
+scipy
+patchelf
+pyglet==1.5.27   					# CartPole requirement
+mujoco==2.3.5						# dmmujoco envs requirement
+gymnasium==0.28.1 					# dmmujoco envs requirement
+imageio==2.30.0 					# dmmujoco envs requirement

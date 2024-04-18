@@ -1,0 +1,13 @@
+---
+wandb: disabled
+timesteps: 1000
+eval_freq: 500
+eval_episodes: 1
+test_episodes: 1
+seed: 42
+now: 2
+gradient_steps: 1
+dr_percentage: 0.2
+algo: sac
+verbose: 2
+debug: true

@@ -1,0 +1,5 @@
+---
+env: RandomWalker2d-v0
+performance_lb: 1600
+dr_percentage: 0.75
+n_contexts_for_eval: 260  # 13 dims * 20 samples

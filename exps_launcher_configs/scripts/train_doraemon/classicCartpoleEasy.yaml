@@ -1,0 +1,4 @@
+---
+env: RandomContinuousCartPoleEasy-v0
+performance_lb: 400
+compute_final_heatmap: true

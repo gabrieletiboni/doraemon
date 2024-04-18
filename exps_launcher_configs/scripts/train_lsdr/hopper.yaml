@@ -1,0 +1,4 @@
+---
+env: RandomHopper-v0
+performance_lb: 1600
+n_contexts_for_eval: 160

@@ -1,0 +1,4 @@
+---
+host:
+  time: '8:00:00'
+timesteps: 7500000

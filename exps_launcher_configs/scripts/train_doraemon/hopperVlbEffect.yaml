@@ -1,0 +1,10 @@
+---
+# Effect of performance vs. entropy trade-off
+env: RandomHopper-v0
+host:
+  time: '30:00:00'
+timesteps: 15000000
+n_iters: 150
+kl_ub: 0.005
+sweep:
+  performance_lb: [1800, 1600, 1400]

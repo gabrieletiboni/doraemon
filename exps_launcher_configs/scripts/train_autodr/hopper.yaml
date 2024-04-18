@@ -1,0 +1,4 @@
+---
+env: RandomHopper-v0
+threshold_low: 800
+threshold_high: 1600

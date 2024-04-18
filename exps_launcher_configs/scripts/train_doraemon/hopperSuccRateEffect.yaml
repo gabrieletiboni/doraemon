@@ -1,0 +1,11 @@
+---
+# Effect of succRate vs. entropy trade-off
+env: RandomHopper-v0
+host:
+  time: '30:00:00'
+timesteps: 15000000
+n_iters: 150
+kl_ub: 0.005
+performance_lb: 1600
+sweep:
+  success_rate_condition: [0.5, 0.75, 0.9]

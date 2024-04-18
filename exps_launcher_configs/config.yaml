@@ -1,0 +1,7 @@
+---
+fake: false
+test: false
+no_confirmation: false
+preview: true
+force_hostname_environ: false
+noslurm: true

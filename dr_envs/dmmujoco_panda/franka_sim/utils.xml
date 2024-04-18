@@ -1,0 +1,11 @@
+{# Some useful macros used throughout the simulations #}
+
+{# Calculate the moment of inertia of a cylinder, given size and mass #}
+{% macro cylinder_inertia(radius, height, mass) -%}
+{{ mass * (3*radius*radius + height*height)/12 }} {{ mass * (3*radius*radius + height*height)/12 }} {{ mass * radius*radius/2 -}}
+{% endmacro %}
+
+{# Calculate the moment of inertia of a box, given size and mass #}
+{% macro box_inertia(sizex, sizey, sizez, mass) -%}
+{{ mass * (sizey*sizey + sizez*sizez)/12 }} {{ mass * (sizex*sizex + sizez*sizez)/12 }} {{ mass * (sizex*sizex + sizey*sizey)/12 -}}
+{% endmacro %}

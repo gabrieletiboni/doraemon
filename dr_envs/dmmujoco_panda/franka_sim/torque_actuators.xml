@@ -1,0 +1,7 @@
+<general class="panda" name="actuator1" joint="joint1" gainprm="1" biasprm="0" forcelimited="false" forcerange="-87 87" ctrllimited="false" ctrlrange="-87 87"/>
+<general class="panda" name="actuator2" joint="joint2" gainprm="1" biasprm="0" forcelimited="false" forcerange="-87 87" ctrllimited="false" ctrlrange="-87 87"/>
+<general class="panda" name="actuator3" joint="joint3" gainprm="1" biasprm="0" forcelimited="false" forcerange="-87 87" ctrllimited="false" ctrlrange="-87 87"/>
+<general class="panda" name="actuator4" joint="joint4" gainprm="1" biasprm="0" forcelimited="false" forcerange="-87 87" ctrllimited="false" ctrlrange="-87 87"/>
+<general class="panda" name="actuator5" joint="joint5" gainprm="1" biasprm="0" forcelimited="false" forcerange="-12 12" ctrllimited="false" ctrlrange="-12 12"/>
+<general class="panda" name="actuator6" joint="joint6" gainprm="1" biasprm="0" forcelimited="false" forcerange="-12 12" ctrllimited="false" ctrlrange="-12 12"/>
+<general class="panda" name="actuator7" joint="joint7" gainprm="1" biasprm="0" forcelimited="false" forcerange="-12 12" ctrllimited="false" ctrlrange="-12 12"/>

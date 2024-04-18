@@ -1,0 +1,66 @@
+{% extends "BaseScene.xml" %}
+
+{% set with_goal=with_goal | default(False) %}
+{% set display_goal_range=display_goal_range | default(False) %}
+{% set table_length=table_length | default(1.89) %}
+{% set table_width=table_width | default(0.8) %}
+{% set table_height=table_height | default(0.75) %}
+{% set robot_pos=table_length/2 - 0.155 %}
+{% set table_thickness=table_thickness | default(0.025) %}
+
+
+{% block default %}
+	{{ super() }}
+    <default class="gripper-table">
+        <pair condim="3" solref="1e-3 1" />
+    </default>
+{% endblock %}
+
+{% block assets %}
+    {{ super() }}
+    <material name="dark" rgba="0.106 0.125 0.129 1" specular="0.2"/>
+    <material name="table_top" rgba=".867 .894 .89 1" specular=".1" shininess="0.1"/>
+    <material name="purple" rgba=".38 0 0.43 0.2"/>
+    <material name="green_target" rgba="0.220 0.557 0.235 1"/>
+{% endblock %}
+
+
+{% block worldbody %}
+    <body name="table" pos="{{ robot_pos }} 0 0">
+        <geom name="table" solref=".1 .1" type="box" size="{{ table_length/2 }} {{ table_width/2 }} {{table_thickness/2}}" pos="0 0 {{ table_height }}" material="table_top"/>
+        <geom name="leg1" solref=".1 .1" type="box" size="0.015 0.015 {{ table_height/2 }}" pos="-{{ table_length/2 - 0.04 }} -{{ table_width/2 - 0.04 }} {{ table_height/2 }}" material="dark"/>
+        <geom name="leg2" solref=".1 .1" type="box" size="0.015 0.015 {{ table_height/2 }}" pos="-{{ table_length/2 - 0.04 }} {{ table_width/2 - 0.04 }} {{ table_height/2 }}" material="dark"/>
+        <geom name="leg3" solref=".1 .1" type="box" size="0.015 0.015 {{ table_height/2 }}" pos="{{ table_length/2 - 0.04 }} -{{ table_width/2 - 0.04 }} {{ table_height/2 }}" material="dark"/>
+        <geom name="leg4" solref=".1 .1" type="box" size="0.015 0.015 {{ table_height/2 }}" pos="{{ table_length/2 - 0.04 }} {{ table_width/2 - 0.04 }} {{ table_height/2 }}" material="dark"/>
+        <body name="robot_container" pos="-{{ robot_pos }} 0 {{table_height + 0.012 }}">
+            {# Don't forget to include the robot... #}
+            {# We can fix robot_id to 0 for now #}
+            {% include "franka_chain_jinja.xml" %}
+        </body>
+    </body>
+
+    {% if with_goal %}
+    {% set goal_marker_size=goal_marker_size | default(0.02) %}
+    <!-- <site name="goal" pos="1.0 0 {{ table_height + table_thickness/2 + goal_marker_size}}" size="{{goal_marker_size}}" material="red_target" /> -->
+    <geom material="green_target" name="goal" pos="1.0 0 {{ table_height + table_thickness/2 + 0.001}}" size="{{goal_marker_size}} .001" solref="0.1 0.1" type="cylinder" contype="0" conaffinity="0" />
+    {% endif %}
+
+    {% if display_goal_range %}
+    {% set goal_range_center=goal_range_center %}
+    {% set goal_range_size=goal_range_size %}
+    <geom material="purple" name="target_range" pos="{{ goal_range_center[0] }} {{ goal_range_center[1] }} {{ table_height + table_thickness/2 + 0.001}}" size="{{ goal_range_size[0] }} {{ goal_range_size[1] }} .125" solref="0.1 0.1" type="plane" contype="0" conaffinity="0" />
+    {% endif %}
+{% endblock %}
+
+
+{% block contact %}
+    <pair class="gripper-table" geom1="table" geom2="panda_finger1" />
+    <pair class="gripper-table" geom1="table" geom2="panda_finger2" />
+{% endblock %}
+
+{# Overwrite the cameras block #}
+{# We need to move the cam a bit to see more of the table surface #}
+{% block cameras %}
+    <camera name='side_camera' pos='0.8 -1.6 1.4' euler='1.4 0 0' />
+    <camera name='top_camera' pos='0.6 0.0 3.0' euler='0. 0. 0.0' />
+{% endblock %}

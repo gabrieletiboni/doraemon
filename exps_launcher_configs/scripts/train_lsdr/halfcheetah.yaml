@@ -1,0 +1,4 @@
+---
+env: RandomHalfCheetah-v0
+performance_lb: 5000
+n_contexts_for_eval: 160

@@ -1,0 +1,5 @@
+---
+env: RandomContinuousInvertedCartPoleEasy-v0
+threshold_low: 2100
+threshold_high: 4200
+compute_final_heatmap: true

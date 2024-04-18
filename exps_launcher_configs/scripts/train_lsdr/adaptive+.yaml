@@ -1,0 +1,5 @@
+---
+stack_history: 5
+dyn_in_obs: true
+actor_history_only: true
+critic_dyn_only: true

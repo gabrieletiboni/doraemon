@@ -1,0 +1,23 @@
+---
+host:
+  job-name : doraemon
+  cpus-per-task: 5
+timesteps: 7500000
+eval_freq: 100000
+n_iters: 75
+now: 5
+algo: sac
+dr_percentage: 0.95
+gradient_steps: 1
+train_until_lb: true
+verbose: 2
+hard_performance_constraint: true
+prior_constraint: false
+compute_final_heatmap: false
+force_success_with_returns: false
+wandb: disabled
+
+# Parameters to be set explicitly
+env: null
+kl_ub: null
+performance_lb: null

@@ -1,0 +1,5 @@
+---
+env: RandomWalker2d-v0
+performance_lb: 1600
+dr_percentage: 0.75
+other_eval_env_dr: 0.75

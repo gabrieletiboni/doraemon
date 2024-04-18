@@ -1,0 +1,3 @@
+---
+force_success_with_returns: true
+performance_lb: null                    # sanity check: a proper performance_lb needs to be defined explicitly to prevent any errors

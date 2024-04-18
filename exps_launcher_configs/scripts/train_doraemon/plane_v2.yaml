@@ -1,0 +1,5 @@
+---
+env: RandomPlaneEasy-v0
+performance_lb: 25  # timesteps at the center
+dr_percentage: 1.0
+init_beta_param: 200.

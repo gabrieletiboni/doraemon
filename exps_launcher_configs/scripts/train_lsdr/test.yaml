@@ -1,0 +1,18 @@
+---
+wandb: disabled
+timesteps: 3000
+eval_episodes: 1
+test_episodes: 1
+seed: 42
+now: 2
+gradient_steps: 1
+dr_percentage: 0.2
+algo: sac
+performance_lb: 0
+obj_fun_lr: 0.001
+timesteps_per_iter: 500
+count_eval_ts_in_budget: false
+n_contexts_for_eval: 10
+whiten_performance: true
+verbose: 2
+debug: true

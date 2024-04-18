@@ -1,0 +1,4 @@
+---
+search_space_id: 2  # easy DR0
+eval_search_space_id: 1  # wide
+dr_percentage: 0.

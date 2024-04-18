@@ -1,0 +1,5 @@
+---
+env: RandomWalker2d-v0
+threshold_low: 800
+threshold_high: 1600
+dr_percentage: 0.75
