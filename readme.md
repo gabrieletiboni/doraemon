@@ -28,7 +28,7 @@ tar -xf mujoco210-linux-x86_64.tar.gz
 # Install mujoco 2.1 dependencies at:
 # https://github.com/openai/mujoco-py/issues/627
 
-# 3.
+# 1.3
 # Add env variables (path may differ for your system)
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.mujoco/mujoco210/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
