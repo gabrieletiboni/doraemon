@@ -22,8 +22,8 @@ We empirically validate the consistent benefits of DORAEMON in obtaining highly 
   <tr>
     <td>No DR</td>
     <td>Fixed DR</td>
-    <td>[LSDR](https://ieeexplore.ieee.org/document/9341019/)</td>
-    <td>[AutoDR](https://arxiv.org/abs/1910.07113)</td>
+    <td><a href="https://ieeexplore.ieee.org/document/9341019/">LSDR</a></td>
+    <td><a href="https://arxiv.org/abs/1910.07113">AutoDR</td>
     <td>DORAEMON</td>
   </tr>
 </table>
