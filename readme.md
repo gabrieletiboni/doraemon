@@ -14,7 +14,7 @@ We empirically validate the consistent benefits of DORAEMON in obtaining highly 
 <table style="text-align: center;">
   <thead>
     <tr>
-      <td colspan="4">Pushing task</td>
+      <td style="font-size: smaller; font-weight: bold; text-align: center;" colspan="4">PandaPush: push a cube with unknown center of mass to a target location</td>
     </tr>
   </thead>
   <tr>
