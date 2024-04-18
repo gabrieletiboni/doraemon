@@ -1,0 +1,9 @@
+*.pyc
+__pycache__
+*/__pycache__
+*egg-info
+*.sh
+runs/
+local/
+wandb/
+deprecated/
