@@ -48,7 +48,7 @@ This code has been tested with Python 3.7, on a Ubuntu 20.04 machine.
 ## Getting started
 
 ### Quick test
-- `python train_doraemon.py --wandb disabled --env RandomContinuousInvertedCartPoleEasy-v0 -t 1500 --eval_freq 500 --gradient_steps 1 --eval_episodes 1 --test_episodes 1 --seed 42 --dr_percentage 0.5 --algo sac --performance_lb 0 --kl_ub 2 --n_iters 3 --verbose 2 --debug`
+- `python train_doraemon.py --env RandomContinuousInvertedCartPoleEasy-v0 -t 1500 --eval_freq 500 --gradient_steps 1 --eval_episodes 1 --test_episodes 1 --seed 42 --dr_percentage 0.5 --algo sac --performance_lb 0 --kl_ub 2 --n_iters 3 --verbose 2 --wandb disabled --debug`
 
 ### Reproduce paper results
 The commands below launch training scripts locally in background, on a single seed. Alternatively, you may set the flag `exps.noslurm=false` to run them as slurm jobs. In the latter case, you may specify flags such as `host.time=300` (5 hours) for custom sbatch parameters.
