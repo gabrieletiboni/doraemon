@@ -13,8 +13,10 @@ We empirically validate the consistent benefits of DORAEMON in obtaining highly 
 
 ## Installation
 
-1. Install mujoco 2.1:
+1. Install mujoco 2.1 (follow instructions below or [here](https://github.com/openai/mujoco-py)):
 ```
+# 1.1
+# Install mujoco binaries
 cd ~
 wget https://mujoco.org/download/mujoco210-linux-x86_64.tar.gz 
 mkdir ~/.mujoco
@@ -22,14 +24,21 @@ mv ~/mujoco210-linux-x86_64.tar.gz ~/.mujoco
 cd ~/.mujoco
 tar -xf mujoco210-linux-x86_64.tar.gz
 
-### Install mujoco 2.1 dependencies at https://github.com/openai/mujoco-py/issues/627
+# 1.2
+# Install mujoco 2.1 dependencies at:
+# https://github.com/openai/mujoco-py/issues/627
+
+# 3.
+# Add env variables (path may differ for your system)
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.mujoco/mujoco210/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 ```
+
 2. Install DORAEMON dependences:
 ```
 pip install -r requirements.txt
 ```
+
 3. Install the [exps-launcher](https://github.com/gabrieletiboni/exps-launcher/) package. You may skip this step and use classic CLI parameters instead, but we provide examples based on our experiments-launcher syntax, as it improves readability.
 
 4. (optional) set up `wandb login` with your WeightsAndBiases account. If you do not wish to use wandb to track the experiment results, set `wandb="disabled"` when launching our scripts with the exps-launcher.  
