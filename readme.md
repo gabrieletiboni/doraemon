@@ -16,11 +16,11 @@ We empirically validate the consistent benefits of DORAEMON in obtaining highly 
 
 <table>
   <tr>
-    <td><img src="docs/assets/img/gifs/NoDR_hard_progress.gif" width="220" /></td>
-    <td><img src="docs/assets/img/gifs/FixedDR_hard_progress.gif" width="220" /></td>
-    <td><img src="docs/assets/img/gifs/LSDR_hard_progress.gif" width="220" /></td>
-    <td><img src="docs/assets/img/gifs/AutoDR_hard_progress.gif" width="220" /></td>
-    <td><img src="docs/assets/img/gifs/Doraemon_hard_progress.gif" width="220" /></td>
+    <td><img src="docs/assets/img/gifs/NoDR_hard_progress.gif" width="180" /></td>
+    <td><img src="docs/assets/img/gifs/FixedDR_hard_progress.gif" width="180" /></td>
+    <td><img src="docs/assets/img/gifs/LSDR_hard_progress.gif" width="180" /></td>
+    <td><img src="docs/assets/img/gifs/AutoDR_hard_progress.gif" width="180" /></td>
+    <td><img src="docs/assets/img/gifs/Doraemon_hard_progress.gif" width="180" /></td>
   </tr>
   <tr>
     <td>No DR</td>
@@ -30,6 +30,8 @@ We empirically validate the consistent benefits of DORAEMON in obtaining highly 
     <td>DORAEMON</td>
   </tr>
 </table>
+[1] lorem ipsum
+[2] lorem ipsum
 
 ## Installation
 
