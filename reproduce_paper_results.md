@@ -2,7 +2,7 @@
 
 The commands below launch training scripts locally in background, on a single seed. Alternatively, you may set the flag `exps.noslurm=false` to run them as slurm jobs. In the latter case, you may specify flags such as `host.time=300` (5 hours) for custom sbatch parameters.
 To run multiple seeds, you may add the flag `sweep.config=[tenseeds]` or `sweep.seed=[42,43,44,45,46]`.
-Refer to [exps-launcher](exps-launcher) for more information on our experiments-launcher syntax.
+Refer to [exps-launcher](https://github.com/gabrieletiboni/exps-launcher/) for more information on our experiments-launcher syntax.
 
 #### NO-DR
   - CartPole: `python launch_exps.py script=train_udr config=[adaptive+,classicCartpoleEasy,short] seed=42 wandb=offline exps.noslurm=true exps.group_suffix="_NoDR" dr_percentage=0.0`

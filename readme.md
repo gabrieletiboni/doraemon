@@ -30,9 +30,9 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 ```
 pip install -r requirements.txt
 ```
-3. Install the [exps-launcher](exps-launcher) package. You may skip this step and use classic CLI parameters instead, but we provide examples based on our experiments-launcher syntax, as it improves readability.
+3. Install the [exps-launcher](https://github.com/gabrieletiboni/exps-launcher/) package. You may skip this step and use classic CLI parameters instead, but we provide examples based on our experiments-launcher syntax, as it improves readability.
 
-4. (optional) set up `wandb login` with your WeightsAndBiases account. If you do not wish to use wandb to track the experiment results, set `wandb="disabled"` when launching our scripts.  
+4. (optional) set up `wandb login` with your WeightsAndBiases account. If you do not wish to use wandb to track the experiment results, set `wandb="disabled"` when launching our scripts with the exps-launcher.  
 
 This code has been tested with Python 3.7, on a Ubuntu 20.04 machine.
 
@@ -43,7 +43,7 @@ This code has been tested with Python 3.7, on a Ubuntu 20.04 machine.
 
 ### Reproduce paper results
 The commands below launch training scripts locally in background, on a single seed. Alternatively, you may set the flag `exps.noslurm=false` to run them as slurm jobs. In the latter case, you may specify flags such as `host.time=300` (5 hours) for custom sbatch parameters.
-To run multiple seeds, you may add the flag `sweep.config=[tenseeds]` or `sweep.seed=[42,43,44,45,46]`. Refer to [exps-launcher](exps-launcher) for more information on our experiments-launcher syntax.
+To run multiple seeds, you may add the flag `sweep.config=[tenseeds]` or `sweep.seed=[42,43,44,45,46]`. Refer to [exps-launcher](https://github.com/gabrieletiboni/exps-launcher/) for more information on our experiments-launcher syntax.
 
 #### DORAEMON
 - Plane: `python launch_exps.py script=train_doraemon config=[adaptive+,plane_v2,short,succRate50] sweep.kl_ub=[0.1,0.05,0.01,0.005,0.001] seed=42 wandb="online" exps.noslurm=true`
