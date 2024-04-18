@@ -23,7 +23,7 @@ Refer to [exps-launcher](https://github.com/gabrieletiboni/exps-launcher/) for m
  - PandaPush: `python launch_exps.py script=train_udr config=[adaptive+,pandaPush_v11,medium,space1,qacc04] seed=42 exps.noslurm=true wandb="offline"`
 
 #### DORAEMON
-- Plane: `python launch_exps.py script=train_doraemon config=[adaptive+,plane_v2,short,succRate50] sweep.kl_ub=[0.1,0.05,0.01,0.005,0.001] seed=42 wandb="offline" exps.noslurm=true`
+- Inclined Plane (toy problem): `python launch_exps.py script=train_doraemon config=[adaptive+,plane_v2,short,succRate50] sweep.kl_ub=[0.1,0.05,0.01,0.005,0.001] seed=42 wandb="offline" exps.noslurm=true`
 - CartPole: `python launch_exps.py script=train_doraemon config=[adaptive+,classicCartpoleEasy,short,succRate50] seed=42 exps.noslurm=true wandb="offline" kl_ub=0.001`
 - SwingUpCartPole: `python launch_exps.py script=train_doraemon config=[adaptive+,cartpoleEasy,short,succRate50] seed=42 exps.noslurm=true wandb="offline" kl_ub=0.1`
 - Hopper: `python launch_exps.py script=train_doraemon config=[adaptive+,hopper,longx,succRate50] seed=42 exps.noslurm=true wandb="offline" kl_ub=0.005`
